@@ -1,0 +1,171 @@
+<!-- 文档声明，声明这是一个html5的文档 -->
+<!DOCTYPE html>
+<!-- 根标签 这是一个html的代码  lang语言 en English-->
+<html lang="en">
+<!-- 头部 设置当前页面进行配置 不会显示在浏览器窗口里 -->
+<head>
+    <!-- 字符编码 utf-8 -->
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- 标题 显示在浏览器标题中 -->
+    <title>HTML页面</title>
+    <style>
+        body{
+            background-image: url(./img/mv.jpg);
+        }
+    </style>
+</head>
+<!-- 主体（）躯干，浏览器窗口里内容在这里写 比如文本、图片、超链接…… -->
+<body>
+    我的HTML页面
+    <!-- <标签名 属性="值">内容</标签名>   <标签名 属性="值" />-->
+    <!-- 文本 -->
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+    <p>这是一个段落</p>
+    <b>粗体标签（强调文本）</b>
+    <strong>加粗</strong>
+    <em>斜体（强调文本）</em>
+    <i>斜体</i>
+    <p>上标标签<sup>2</sup></p>
+    <p>下标标签<sub>2</sub></p>
+    <span>没有什么效果，布局</span>
+    <!-- 水平线 -->
+    <hr/>
+    <!-- 图片 -->
+    <!-- src 图片地址 相对地址(./当前文件夹 ../上级文件夹)和绝对地址 -->
+    <!-- width 像素 100px 百分比 -->
+    <div>
+        <img src="./img/er.png" width="300px" height="300px" />
+    </div>
+    <!-- 超链接 -->
+    <!-- href 页面跳转的地址 -->
+    <!-- target 打开的方式  _self 当前页面打开 默认值  _blank 在新页面打开 _parent 在父页面打开 -->
+    <a href="https://www.baidu.com/?tn=88093251_74_hao_pg" target="_blank">超链接的内容</a>
+    <!-- 组合标签 多个标签组合到一起，完成一个功能 -->
+    <!-- 有序列表 ol order list li list item-->
+    <ol>
+        <li>JAVASE</li>
+        <li>Mysql</li>
+        <li>JDBC</li>
+        <li>WEB</li>
+    </ol>
+    <!-- 无序的列表 最常用 unorder list -->
+    <ul>
+        <li>JAVASE</li>
+        <li>Mysql</li>
+        <li>JDBC</li>
+        <li>WEB</li>
+    </ul>
+    <!-- 自定义列表 -->
+    <dl>
+        <dt>电子商品</dt><dd>手机</dd><dd>电脑</dd>
+        <dt>化妆品</dt><dd>口红</dd><dd>防晒霜</dd>
+    </dl>
+    <!-- 表格 -->
+    <!-- table表格 caption 表格的标题 th 列标题 tr 表格行 td 单元格 -->
+    <!-- border 边框 width 宽度 cellspacing单元格的间距 cellpadding单元格边框于内容的间距 -->
+    <!-- td的属性 width 宽度  rowspan 行合并 一列多行 colspan 列合并 一行多列-->
+    <!-- <thead> <tbody> 可以不写-->
+    <!-- 成绩表 -->
+    <table border="1" width="100%" cellspacing = "1" cellpadding="2" >
+        <caption>成绩表</caption>
+        <thead>
+            <tr>
+                <th>班级</th>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>备注1</th>
+                <th>备注2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="60%" rowspan="3">Java0704</td>
+                <td>崔杰</td>
+                <td>100</td>
+                <td colspan="2">文雅帅气</td>
+                
+            </tr>
+            <tr>
+                <!-- <td>Java0704</td> -->
+                <td>刘强</td>
+                <td>100</td>
+                <td colspan="2">无敌骚</td>
+            </tr>
+            <tr>
+                <!-- <td>Java0704</td> -->
+                <td>付博</td>
+                <td>100</td>
+                <td  colspan="2">翩翩少年温文尔雅</td>
+            </tr>
+            <tr>
+                <td>Java0704</td>
+                <td>管斌</td>
+                <td>100</td>
+                <td colspan="2">这也行那也行</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 表单 -->
+    
+    form表单示例：
+    <hr/>
+    <form action="https://www.baidu.com/?tn=88093251_74_hao_pg" method="get">
+        <!-- hidden 隐藏域，在页面中不会显示，也不需要用户进行操作，表单提交给，传递用户不应该看到的数据 -->
+        <input type="hidden" name="id" value="1"/>
+        <!-- text 单行文本域 placeholder简短的提示信息-->
+        用户名：<input type="text" name="name" value="admin" placeholder="请输入用户名"/><br/>
+        <!-- password 密码域，用来输入密码，掩码显示 -->
+        <!-- 密码和用户名对齐？
+            &emsp;全角空格，占一个汉字字符；&ensp; 半角空格，占1/2个汉字字符 &nbsp;半角不换行空格 宽度不确定受字体影响-->
+        密&emsp;​码：<input type="password" name="password" value="123" placeholder="请输入密码"><br/>
+        <!-- radio 单选按钮 name相同的radio会被当做一组，一组的radio最多只能有一个被选中
+        如果希望某一项选中，可设置checked属性-->
+        性别：
+        <input type="radio" name="sex" value="男">男
+        <input type="radio" name="sex" value="女" checked>女<br/>
+        <!-- checkbox 复选框，是可以多选的，也可以选中，或不选中 可设置checked属性 -->
+        爱好：
+        <input type="checkbox" name="hobby" value="吃饭">吃饭
+        <input type="checkbox" name="hobby" value="睡觉" checked>睡觉
+        <input type="checkbox" name="hobby" value="打豆豆" checked>打豆豆<br/>
+        <!-- number数字 
+            min最小值
+			max最大值
+			step每次变化的值
+			value默认值-->
+        身高：<input type="number" name="height" min="150" max="230" step="5" value="160">&nbsp;米<br/>
+        <!-- 邮箱 会在提交时校验 -->
+        邮箱：<input type="email" name="email" placeholder="请输入邮箱"><br/>
+        <!-- file 文件 -->
+        照片：<input type="file" name="photo"><br/>
+        <!-- select 元素(下拉列表) 
+            name:当前下拉列表的名称
+            默认选中属性：selected="selected"
+            多选 multiple="multiple" 按住ctrl多选
+        -->
+        班级：<select name="clazz">
+            <option value="1">230701Java</option>
+            <option value="2">230702Java</option>
+            <option value="3">230703Java</option>
+            <option value="4">230704Java</option>
+        </select><br/>
+        特长：
+        <select name="speciality" multiple="multiple">
+            <option value="1">精通Java</option>
+            <option value="2">熟悉web</option>
+            <option value="3">精通mysql数据库</option>
+            <option value="4">腿特长</option>
+        </select><br/>
+        <!-- submit 提交 提交表单的按钮，点击时会将当前表单中所有的有效表单元素的值获取并上传到action的地址-->
+        <input type="submit" value="提交">
+        <!-- reset 重置 点击时会将用户的输入全部清除，回到最初始的状态 value设置值的还是value的值 -->
+        <input type="reset" value="重置">
+    </form>
+</body>
+</html>
