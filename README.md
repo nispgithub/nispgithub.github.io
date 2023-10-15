@@ -3,4 +3,4 @@
 
 java study
 
-[git介绍](/git.mid)
+[git介绍](/study/git.md)
