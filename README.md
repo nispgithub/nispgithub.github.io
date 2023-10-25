@@ -19,7 +19,7 @@
 
 [2_swagger](/study/2_swagger.md)
 
-[3_跨域](/study/3_跨域.md)
+[3_跨域](/study/cors.md)
 
 [4_Jwt](/study/4_Jwt.md)
 
