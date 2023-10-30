@@ -24,3 +24,7 @@
 [4_Jwt](/study/4_Jwt.md)
 
 [5_redis](/study/5_redis.md)
+
+[6_初识Vue](/study/6_初识Vue.md)
+
+[7_Vue基础语法](/study/7_Vue基础语法.md)
